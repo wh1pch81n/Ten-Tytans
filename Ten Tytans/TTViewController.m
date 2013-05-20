@@ -26,4 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)ButtonNewGame:(id)sender {
+	//SegwayTitle2GameInterfaceButtons is the name given to the segway's identifier
+	//The below method allows segue execution programatically
+	[self performSegueWithIdentifier:@"SegwayTitle2GameInterfaceButtons" sender:self];// temporary
+}
+
+- (IBAction)ButtonLoadGame:(id)sender {
+}
+
+- (IBAction)ButtonCredits:(id)sender {
+}
 @end
