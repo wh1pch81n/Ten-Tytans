@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F0388581749A77A00FCDCFA"
                BuildableName = "Ten Tytans.app"
-               BlueprintName = "Ten Tytans"
-               ReferencedContainer = "container:Ten Tytans.xcodeproj">
+               BlueprintName = "Team Tytans"
+               ReferencedContainer = "container:Team Tytans.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F0388581749A77A00FCDCFA"
             BuildableName = "Ten Tytans.app"
-            BlueprintName = "Ten Tytans"
-            ReferencedContainer = "container:Ten Tytans.xcodeproj">
+            BlueprintName = "Team Tytans"
+            ReferencedContainer = "container:Team Tytans.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F0388581749A77A00FCDCFA"
             BuildableName = "Ten Tytans.app"
-            BlueprintName = "Ten Tytans"
-            ReferencedContainer = "container:Ten Tytans.xcodeproj">
+            BlueprintName = "Team Tytans"
+            ReferencedContainer = "container:Team Tytans.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F0388581749A77A00FCDCFA"
             BuildableName = "Ten Tytans.app"
-            BlueprintName = "Ten Tytans"
-            ReferencedContainer = "container:Ten Tytans.xcodeproj">
+            BlueprintName = "Team Tytans"
+            ReferencedContainer = "container:Team Tytans.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

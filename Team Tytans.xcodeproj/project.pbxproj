@@ -17,28 +17,49 @@
 		7F0388711749A77A00FCDCFA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0388701749A77A00FCDCFA /* Default@2x.png */; };
 		7F0388731749A77A00FCDCFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0388721749A77A00FCDCFA /* Default-568h@2x.png */; };
 		7F0388761749A77A00FCDCFA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0388741749A77A00FCDCFA /* MainStoryboard.storyboard */; };
-		7F0388791749A77A00FCDCFA /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0388781749A77A00FCDCFA /* TTViewController.m */; };
 		7F0388801749B53500FCDCFA /* megaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F03887F1749B53500FCDCFA /* megaman.png */; };
+		7F4D013D175AD44F0007412C /* TTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D0135175AD44E0007412C /* TTViewController.m */; };
+		7F4D013E175AD44F0007412C /* TTGameScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D0138175AD44E0007412C /* TTGameScreenViewController.m */; };
+		7F4D013F175AD44F0007412C /* TTPictureStoryPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D0139175AD44E0007412C /* TTPictureStoryPanViewController.m */; };
+		7F4D0140175AD44F0007412C /* TTGameInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D013B175AD44E0007412C /* TTGameInterfaceViewController.m */; };
+		7F4D0147175AD45C0007412C /* TTSolidMovingBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D0142175AD45C0007412C /* TTSolidMovingBlock.m */; };
+		7F4D0148175AD45C0007412C /* TTSolidBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D0144175AD45C0007412C /* TTSolidBlock.m */; };
+		7F4D0149175AD45C0007412C /* TTGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D0146175AD45C0007412C /* TTGameObject.m */; };
+		7F4D014D175ADACD0007412C /* TTButtonExtraGuestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D014C175ADACD0007412C /* TTButtonExtraGuestures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F0388591749A77A00FCDCFA /* Ten Tytans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ten Tytans.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0388591749A77A00FCDCFA /* Team Tytans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Team Tytans.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F03885C1749A77A00FCDCFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7F03885E1749A77A00FCDCFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F0388601749A77A00FCDCFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7F0388641749A77A00FCDCFA /* Ten Tytans-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ten Tytans-Info.plist"; sourceTree = "<group>"; };
+		7F0388641749A77A00FCDCFA /* Team Tytans-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Team Tytans-Info.plist"; sourceTree = "<group>"; };
 		7F0388661749A77A00FCDCFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F0388681749A77A00FCDCFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7F03886A1749A77A00FCDCFA /* Ten Tytans-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ten Tytans-Prefix.pch"; sourceTree = "<group>"; };
+		7F03886A1749A77A00FCDCFA /* Team Tytans-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Team Tytans-Prefix.pch"; sourceTree = "<group>"; };
 		7F03886B1749A77A00FCDCFA /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
 		7F03886C1749A77A00FCDCFA /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
 		7F03886E1749A77A00FCDCFA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7F0388701749A77A00FCDCFA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7F0388721749A77A00FCDCFA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7F0388751749A77A00FCDCFA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		7F0388771749A77A00FCDCFA /* TTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTViewController.h; sourceTree = "<group>"; };
-		7F0388781749A77A00FCDCFA /* TTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
 		7F03887F1749B53500FCDCFA /* megaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = megaman.png; sourceTree = "<group>"; };
+		7F4D0135175AD44E0007412C /* TTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTViewController.m; sourceTree = "<group>"; };
+		7F4D0136175AD44E0007412C /* TTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTViewController.h; sourceTree = "<group>"; };
+		7F4D0137175AD44E0007412C /* TTGameScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameScreenViewController.h; sourceTree = "<group>"; };
+		7F4D0138175AD44E0007412C /* TTGameScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameScreenViewController.m; sourceTree = "<group>"; };
+		7F4D0139175AD44E0007412C /* TTPictureStoryPanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPictureStoryPanViewController.m; sourceTree = "<group>"; };
+		7F4D013A175AD44E0007412C /* TTPictureStoryPanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPictureStoryPanViewController.h; sourceTree = "<group>"; };
+		7F4D013B175AD44E0007412C /* TTGameInterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameInterfaceViewController.m; sourceTree = "<group>"; };
+		7F4D013C175AD44F0007412C /* TTGameInterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameInterfaceViewController.h; sourceTree = "<group>"; };
+		7F4D0141175AD45C0007412C /* TTSolidMovingBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSolidMovingBlock.h; sourceTree = "<group>"; };
+		7F4D0142175AD45C0007412C /* TTSolidMovingBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSolidMovingBlock.m; sourceTree = "<group>"; };
+		7F4D0143175AD45C0007412C /* TTSolidBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSolidBlock.h; sourceTree = "<group>"; };
+		7F4D0144175AD45C0007412C /* TTSolidBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSolidBlock.m; sourceTree = "<group>"; };
+		7F4D0145175AD45C0007412C /* TTGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameObject.h; sourceTree = "<group>"; };
+		7F4D0146175AD45C0007412C /* TTGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameObject.m; sourceTree = "<group>"; };
+		7F4D014B175ADACD0007412C /* TTButtonExtraGuestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTButtonExtraGuestures.h; sourceTree = "<group>"; };
+		7F4D014C175ADACD0007412C /* TTButtonExtraGuestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTButtonExtraGuestures.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +88,7 @@
 		7F03885A1749A77A00FCDCFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F0388591749A77A00FCDCFA /* Ten Tytans.app */,
+				7F0388591749A77A00FCDCFA /* Team Tytans.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,8 +109,10 @@
 				7F03886B1749A77A00FCDCFA /* TTAppDelegate.h */,
 				7F03886C1749A77A00FCDCFA /* TTAppDelegate.m */,
 				7F0388741749A77A00FCDCFA /* MainStoryboard.storyboard */,
-				7F0388771749A77A00FCDCFA /* TTViewController.h */,
-				7F0388781749A77A00FCDCFA /* TTViewController.m */,
+				7F4D014A175ADA9A0007412C /* buttons */,
+				7F4D0124175AD09E0007412C /* Characters */,
+				7F4D0125175AD09E0007412C /* GameObjects */,
+				7F4D0126175AD09F0007412C /* ViewControllers */,
 				7F0388631749A77A00FCDCFA /* Supporting Files */,
 			);
 			path = "Ten Tytans";
@@ -98,10 +121,10 @@
 		7F0388631749A77A00FCDCFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7F0388641749A77A00FCDCFA /* Ten Tytans-Info.plist */,
+				7F0388641749A77A00FCDCFA /* Team Tytans-Info.plist */,
 				7F0388651749A77A00FCDCFA /* InfoPlist.strings */,
 				7F0388681749A77A00FCDCFA /* main.m */,
-				7F03886A1749A77A00FCDCFA /* Ten Tytans-Prefix.pch */,
+				7F03886A1749A77A00FCDCFA /* Team Tytans-Prefix.pch */,
 				7F03886E1749A77A00FCDCFA /* Default.png */,
 				7F0388701749A77A00FCDCFA /* Default@2x.png */,
 				7F0388721749A77A00FCDCFA /* Default-568h@2x.png */,
@@ -110,12 +133,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7F4D0124175AD09E0007412C /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		7F4D0125175AD09E0007412C /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				7F4D0141175AD45C0007412C /* TTSolidMovingBlock.h */,
+				7F4D0142175AD45C0007412C /* TTSolidMovingBlock.m */,
+				7F4D0143175AD45C0007412C /* TTSolidBlock.h */,
+				7F4D0144175AD45C0007412C /* TTSolidBlock.m */,
+				7F4D0145175AD45C0007412C /* TTGameObject.h */,
+				7F4D0146175AD45C0007412C /* TTGameObject.m */,
+			);
+			path = GameObjects;
+			sourceTree = "<group>";
+		};
+		7F4D0126175AD09F0007412C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F4D0135175AD44E0007412C /* TTViewController.m */,
+				7F4D0136175AD44E0007412C /* TTViewController.h */,
+				7F4D0137175AD44E0007412C /* TTGameScreenViewController.h */,
+				7F4D0138175AD44E0007412C /* TTGameScreenViewController.m */,
+				7F4D0139175AD44E0007412C /* TTPictureStoryPanViewController.m */,
+				7F4D013A175AD44E0007412C /* TTPictureStoryPanViewController.h */,
+				7F4D013B175AD44E0007412C /* TTGameInterfaceViewController.m */,
+				7F4D013C175AD44F0007412C /* TTGameInterfaceViewController.h */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7F4D014A175ADA9A0007412C /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7F4D014B175ADACD0007412C /* TTButtonExtraGuestures.h */,
+				7F4D014C175ADACD0007412C /* TTButtonExtraGuestures.m */,
+			);
+			path = buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7F0388581749A77A00FCDCFA /* Ten Tytans */ = {
+		7F0388581749A77A00FCDCFA /* Team Tytans */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F03887C1749A77A00FCDCFA /* Build configuration list for PBXNativeTarget "Ten Tytans" */;
+			buildConfigurationList = 7F03887C1749A77A00FCDCFA /* Build configuration list for PBXNativeTarget "Team Tytans" */;
 			buildPhases = (
 				7F0388551749A77A00FCDCFA /* Sources */,
 				7F0388561749A77A00FCDCFA /* Frameworks */,
@@ -125,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = "Ten Tytans";
+			name = "Team Tytans";
 			productName = "Ten Tytans";
-			productReference = 7F0388591749A77A00FCDCFA /* Ten Tytans.app */;
+			productReference = 7F0388591749A77A00FCDCFA /* Team Tytans.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +207,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Derrick Ho";
 			};
-			buildConfigurationList = 7F0388541749A77A00FCDCFA /* Build configuration list for PBXProject "Ten Tytans" */;
+			buildConfigurationList = 7F0388541749A77A00FCDCFA /* Build configuration list for PBXProject "Team Tytans" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -152,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F0388581749A77A00FCDCFA /* Ten Tytans */,
+				7F0388581749A77A00FCDCFA /* Team Tytans */,
 			);
 		};
 /* End PBXProject section */
@@ -180,7 +247,14 @@
 			files = (
 				7F0388691749A77A00FCDCFA /* main.m in Sources */,
 				7F03886D1749A77A00FCDCFA /* TTAppDelegate.m in Sources */,
-				7F0388791749A77A00FCDCFA /* TTViewController.m in Sources */,
+				7F4D013D175AD44F0007412C /* TTViewController.m in Sources */,
+				7F4D013E175AD44F0007412C /* TTGameScreenViewController.m in Sources */,
+				7F4D013F175AD44F0007412C /* TTPictureStoryPanViewController.m in Sources */,
+				7F4D0140175AD44F0007412C /* TTGameInterfaceViewController.m in Sources */,
+				7F4D0147175AD45C0007412C /* TTSolidMovingBlock.m in Sources */,
+				7F4D0148175AD45C0007412C /* TTSolidBlock.m in Sources */,
+				7F4D0149175AD45C0007412C /* TTGameObject.m in Sources */,
+				7F4D014D175ADACD0007412C /* TTButtonExtraGuestures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +340,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Ten Tytans/Ten Tytans-Prefix.pch";
-				INFOPLIST_FILE = "Ten Tytans/Ten Tytans-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Ten Tytans/Team Tytans-Prefix.pch";
+				INFOPLIST_FILE = "Ten Tytans/Team Tytans-Info.plist";
+				PRODUCT_NAME = "Team Tytans";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -277,9 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Ten Tytans/Ten Tytans-Prefix.pch";
-				INFOPLIST_FILE = "Ten Tytans/Ten Tytans-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Ten Tytans/Team Tytans-Prefix.pch";
+				INFOPLIST_FILE = "Ten Tytans/Team Tytans-Info.plist";
+				PRODUCT_NAME = "Team Tytans";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -287,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F0388541749A77A00FCDCFA /* Build configuration list for PBXProject "Ten Tytans" */ = {
+		7F0388541749A77A00FCDCFA /* Build configuration list for PBXProject "Team Tytans" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F03887A1749A77A00FCDCFA /* Debug */,
@@ -296,13 +370,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F03887C1749A77A00FCDCFA /* Build configuration list for PBXNativeTarget "Ten Tytans" */ = {
+		7F03887C1749A77A00FCDCFA /* Build configuration list for PBXNativeTarget "Team Tytans" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F03887D1749A77A00FCDCFA /* Debug */,
 				7F03887E1749A77A00FCDCFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

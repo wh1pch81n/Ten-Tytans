@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title Screen-->
         <scene sceneID="AsU-cg-Xjo">
             <objects>
-                <viewController id="avB-Hr-O5h" customClass="TTViewController" sceneMemberID="viewController">
+                <viewController id="avB-Hr-O5h" userLabel="Title Screen" customClass="TTViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSQ-Aq-JYQ" userLabel="View - Title Screen">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -80,18 +80,18 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <segue destination="2" kind="modal" identifier="SegwayTitle2GameInterfaceButtons" id="3lf-VW-Vnk"/>
-                        <segue destination="Ts0-m0-5xQ" kind="modal" identifier="SegwayTitle2PictureStoryPan" id="alV-vq-B6i"/>
+                        <segue destination="2" kind="modal" identifier="SegwayTitle2GameInterfaceButtons" modalTransitionStyle="crossDissolve" id="3lf-VW-Vnk"/>
+                        <segue destination="Ts0-m0-5xQ" kind="modal" identifier="SegwayTitle2PictureStoryPan" modalTransitionStyle="crossDissolve" id="alV-vq-B6i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNu-av-ydR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-120" y="-479"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Interface-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" sceneMemberID="viewController">
+                <viewController id="2" userLabel="Game Interface" customClass="TTGameInterfaceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3" userLabel="View - Game Interface buttons">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -141,24 +141,36 @@
                                     <segue destination="Nc4-cn-nIh" kind="embed" id="GD4-2m-Oql"/>
                                 </connections>
                             </containerView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-Mh-xBg" userLabel="View - Game Screen Button AKA ATTACK"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0j9-Y5-y5K" userLabel="Button - Attack" customClass="TTButtonExtraGuestures">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="e1Y-nh-ivt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZYY-Mh-xBg" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="2fN-Fm-8Ri"/>
                             <constraint firstItem="7Ks-vC-HTe" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="5ld-fj-Z61"/>
                             <constraint firstItem="fy1-1d-oQO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="11" id="FnX-ub-0xS"/>
-                            <constraint firstItem="ZYY-Mh-xBg" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="HXE-Hs-x5E"/>
+                            <constraint firstItem="ko7-7s-Ov5" firstAttribute="top" secondItem="0j9-Y5-y5K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HhS-LF-fUC"/>
                             <constraint firstItem="7Ks-vC-HTe" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="J4k-K0-024"/>
-                            <constraint firstItem="ZYY-Mh-xBg" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Uqn-ak-2ae"/>
+                            <constraint firstItem="0j9-Y5-y5K" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="LNg-zx-AGu"/>
+                            <constraint firstItem="0j9-Y5-y5K" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Ryo-c0-Ycs"/>
+                            <constraint firstItem="fy1-1d-oQO" firstAttribute="top" secondItem="0j9-Y5-y5K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UJN-MZ-zYp"/>
                             <constraint firstItem="fy1-1d-oQO" firstAttribute="top" secondItem="7Ks-vC-HTe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XGG-mP-b5i"/>
                             <constraint firstAttribute="trailing" secondItem="ko7-7s-Ov5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dDD-1K-4OK"/>
                             <constraint firstItem="7Ks-vC-HTe" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="daw-en-7tw"/>
                             <constraint firstItem="fy1-1d-oQO" firstAttribute="baseline" secondItem="JLS-YI-5M9" secondAttribute="baseline" type="default" id="iU0-Lb-i2H"/>
+                            <constraint firstItem="ko7-7s-Ov5" firstAttribute="baseline" secondItem="JLS-YI-5M9" secondAttribute="baseline" type="default" id="kEj-jg-XQY"/>
                             <constraint firstItem="JLS-YI-5M9" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="103" id="kZx-Td-3kr"/>
-                            <constraint firstItem="ko7-7s-Ov5" firstAttribute="baseline" secondItem="JLS-YI-5M9" secondAttribute="baseline" type="default" id="szo-Vz-dlq"/>
-                            <constraint firstAttribute="bottom" secondItem="fy1-1d-oQO" secondAttribute="bottom" constant="8" id="wyR-vj-8AQ"/>
-                            <constraint firstItem="fy1-1d-oQO" firstAttribute="top" secondItem="ZYY-Mh-xBg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yzG-P6-cMH"/>
+                            <constraint firstItem="0j9-Y5-y5K" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="tPs-Hi-pMM"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -168,6 +180,10 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="AttackButton" destination="0j9-Y5-y5K" id="4nA-5E-McP"/>
+                        <outlet property="JumpButton" destination="ko7-7s-Ov5" id="L17-KC-J97"/>
+                        <outlet property="LeftButton" destination="fy1-1d-oQO" id="tnb-OJ-EXN"/>
+                        <outlet property="RightButton" destination="JLS-YI-5M9" id="f1f-V0-6SL"/>
                         <segue destination="Ts0-m0-5xQ" kind="modal" id="Cfm-dJ-inp"/>
                     </connections>
                 </viewController>
@@ -175,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="581" y="-153"/>
         </scene>
-        <!--View Controller-->
+        <!--Picture Story Pan-->
         <scene sceneID="ifW-zi-cKe">
             <objects>
-                <viewController id="Ts0-m0-5xQ" sceneMemberID="viewController">
+                <viewController id="Ts0-m0-5xQ" userLabel="Picture Story Pan" customClass="TTPictureStoryPanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvQ-cu-bXw" userLabel="View - Picture Story Pan">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -202,12 +218,12 @@
             </objects>
             <point key="canvasLocation" x="1282" y="-479"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Screen Graphics-->
         <scene sceneID="CKw-bF-V2m">
             <objects>
-                <viewController id="Nc4-cn-nIh" sceneMemberID="viewController">
+                <viewController id="Nc4-cn-nIh" userLabel="Game Screen Graphics" customClass="TTGameScreenViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="385-Sq-YJx" userLabel="View - Game Screen Graphics">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="261"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4I-QM-rEP">
@@ -249,6 +265,24 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="TTButtonExtraGuestures" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTButtonExtraGuestures.h"/>
+        </class>
+        <class className="TTGameInterfaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTGameInterfaceViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="AttackButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="JumpButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="LeftButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="RightButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="TTGameScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTGameScreenViewController.h"/>
+        </class>
+        <class className="TTPictureStoryPanViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTPictureStoryPanViewController.h"/>
+        </class>
         <class className="TTViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TTViewController.h"/>
             <relationships>
@@ -264,6 +298,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Cfm-dJ-inp"/>
+        <segue reference="alV-vq-B6i"/>
     </inferredMetricsTieBreakers>
 </document>

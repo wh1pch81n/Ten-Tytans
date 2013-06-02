@@ -37,4 +37,7 @@
 
 - (IBAction)ButtonCredits:(id)sender {
 }
+- (IBAction)unwindBackToTitle:(UIStoryboardSegue *) segue{
+	printf("unwindFromGameInterfaceToTitle\n");
+}
 @end
