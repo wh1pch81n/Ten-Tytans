@@ -70,7 +70,7 @@
 	/**left and right*/
 	CGRect curLoc = [[self hero] frame];
 	curLoc.origin.x += (2 + (([self isDashing])?10: 0)) * [self dx];
-	if (curLoc.origin.x + curLoc.size.width < 480 &&
+	if (curLoc.origin.x + curLoc.size.width < self.view.frame.size.width /*480*/ &&
 		curLoc.origin.x >= 0){
 		[[self hero] setFrame:curLoc];
 	}

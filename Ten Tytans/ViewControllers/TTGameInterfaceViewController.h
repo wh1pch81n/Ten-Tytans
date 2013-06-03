@@ -10,7 +10,7 @@
 //#import <CoreMotion/CoreMotion.h>
 //#import <QuartzCore/QuartzCore.h>
 //#import "TTGameScreenViewController.h"
-//#import "TTPictureStoryPanViewController.h"
+#import "TTPictureStoryPanViewController.h"
 
 @interface TTGameInterfaceViewController : UIViewController{
 	BOOL loadTitle;

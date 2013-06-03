@@ -37,7 +37,7 @@ enum eBUT{ eLEFTBUTTON, eRIGHTBUTTON, eJUMPBUTTON,
 	loadTitle = YES;
 	[self initButton:eLEFTBUTTON];
 	[self initButton:eRIGHTBUTTON];
-//	[self initButton:eJUMPBUTTON];
+	[self initButton:eJUMPBUTTON];
 	[self initButton:eATTACKBUTTON];
 //	[self initButton:eTILT];
 }
@@ -59,6 +59,10 @@ enum eBUT{ eLEFTBUTTON, eRIGHTBUTTON, eJUMPBUTTON,
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 //	TTGameScreenViewController *modScreen=(TTGameScreenViewController *)[self GameScreen];
 //	[modScreen StopTimer];
+	if ([segue.identifier isEqualToString:@"EmbeddedSegueGameScreen"]) {
+		TTGameScreenViewController *child = segue.destinationViewController;
+		[[child view] setBackgroundColor:[UIColor greenColor]];
+	}
 }
 -(IBAction)unwindIntoGameInterface:(UIStoryboardSegue *) segue{
 //	TTGameScreenViewController *modScreen=(TTGameScreenViewController *)[self GameScreen];
@@ -103,7 +107,21 @@ enum eBUT{ eLEFTBUTTON, eRIGHTBUTTON, eJUMPBUTTON,
 								   action:@selector(RightButtonOneFingerTwoTaps) forControlEvents:UIControlEventTouchDownRepeat];
 		}break;
 		case eJUMPBUTTON:{
-		//need todo this
+//			button = [[UITapGestureRecognizer alloc]
+//					  initWithTarget:self action:@selector(JumpButtonOneFingerTwoTaps)];
+//			[button setNumberOfTapsRequired:2];
+//			[button setNumberOfTouchesRequired:1];
+//			[button setDelaysTouchesEnded:NO];
+//			[self.JumpButton addGestureRecognizer:button];
+		
+			[self.JumpButton addTarget:self action:@selector(JumpButtonOneFingerTwoTaps)
+						forControlEvents:UIControlEventTouchDownRepeat];
+			[self.JumpButton addTarget:self action:@selector(JumpButtonBegins)
+					  forControlEvents:UIControlEventTouchDown];
+			[self.JumpButton addTarget:self action:@selector(JumpButtonEnds)
+					  forControlEvents:UIControlEventTouchUpInside];
+			[self.JumpButton addTarget:self action:@selector(JumpButtonCancel)
+					  forControlEvents:UIControlEventTouchCancel];
 		}break;
 		case eATTACKBUTTON:{
 		button = [[UITapGestureRecognizer alloc]
@@ -112,7 +130,7 @@ enum eBUT{ eLEFTBUTTON, eRIGHTBUTTON, eJUMPBUTTON,
 			[button setNumberOfTouchesRequired:3];
 			[button setNumberOfTapsRequired:1];
 
-			//todo tap
+			//todo single tap
 			//rotate
 			turn_dial = [[UIRotationGestureRecognizer alloc]
 						 initWithTarget:self
@@ -184,11 +202,21 @@ enum eBUT{ eLEFTBUTTON, eRIGHTBUTTON, eJUMPBUTTON,
 //=================
 // Jump Buttons
 //-----------------
--(void) JumpButtonOneFingerOneTap{
-	printf("jump Button-action: one finger, one tap\n");
+-(void) JumpButtonBegins{
+	printf("jump Button begins\n");
 }
+-(void) JumpButtonEnds{
+	printf("jump Button ends\n");
+}
+//todo: should probably add a cancel here and repeat for all the others. cancel might happen less often but it might happen and you should prepare for that.
+-(void) JumpButtonCancel {
+	printf("jump button cancel\n");
+}
+//
 - (void)JumpButtonOneFingerTwoTaps{
 	printf("jump Button-action: one finger, two taps\n");
+	[self.childViewControllers[0] StopTimer];
+	
 }
 
 //=================
@@ -206,7 +234,7 @@ enum eBUT{ eLEFTBUTTON, eRIGHTBUTTON, eJUMPBUTTON,
 }
 
 //===================
-// mothing shaking
+// motion shaking
 //-------------------
 //- (void)motionRefresh:(id)sender {
 //    double yaw = self.motionManager.deviceMotion.attitude.yaw;

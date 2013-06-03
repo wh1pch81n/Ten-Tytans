@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TTPictureStoryPanViewController : UIViewController
-
+- (IBAction)back:(id)sender;
+@property BOOL shouldSkip;
 @end
