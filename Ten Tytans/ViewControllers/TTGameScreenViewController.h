@@ -12,4 +12,8 @@
 @property (strong, nonatomic) NSTimer *timer;
 -(void) StopTimer;
 -(void) StartTimer;
+@property NSInteger dx;//for moving left and right
+@property BOOL isDashing;//for doubl taps
+@property BOOL isShaking;
+@property (strong, nonatomic) IBOutlet UIImageView *hero;
 @end

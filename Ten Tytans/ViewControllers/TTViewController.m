@@ -14,6 +14,15 @@
 
 @implementation TTViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -29,7 +38,7 @@
 - (IBAction)ButtonNewGame:(id)sender {
 	//SegwayTitle2GameInterfaceButtons is the name given to the segway's identifier
 	//The below method allows segue execution programatically
-	[self performSegueWithIdentifier:@"SegwayTitle2GameInterfaceButtons" sender:self];// temporary
+//	[self performSegueWithIdentifier:@"SegwayTitle2GameInterfaceButtons" sender:self];// temporary
 }
 
 - (IBAction)ButtonLoadGame:(id)sender {

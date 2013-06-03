@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="avB-Hr-O5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -32,6 +32,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ButtonNewGame:" destination="avB-Hr-O5h" eventType="touchUpInside" id="Brt-NN-Mhp"/>
+                                    <segue destination="oeH-1B-0vI" kind="unwind" unwindAction="unwindIntoGameInterface:" id="tCM-vv-YlD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O16-im-24T">
@@ -79,14 +80,11 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <segue destination="2" kind="modal" identifier="SegwayTitle2GameInterfaceButtons" modalTransitionStyle="crossDissolve" id="3lf-VW-Vnk"/>
-                        <segue destination="Ts0-m0-5xQ" kind="modal" identifier="SegwayTitle2PictureStoryPan" modalTransitionStyle="crossDissolve" id="alV-vq-B6i"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNu-av-ydR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oeH-1B-0vI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="-479"/>
+            <point key="canvasLocation" x="536" y="-603"/>
         </scene>
         <!--Game Interface-->
         <scene sceneID="5">
@@ -135,10 +133,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ks-vC-HTe" userLabel="Container View - Game Screen">
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ks-vC-HTe" userLabel="Container View - Game Screen" customClass="TTGameObject">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="Nc4-cn-nIh" kind="embed" id="GD4-2m-Oql"/>
+                                    <segue destination="Nc4-cn-nIh" kind="embed" id="v8k-D0-Qnz"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0j9-Y5-y5K" userLabel="Button - Attack" customClass="TTButtonExtraGuestures">
@@ -181,22 +179,23 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="AttackButton" destination="0j9-Y5-y5K" id="4nA-5E-McP"/>
+                        <outlet property="GameScreen" destination="7Ks-vC-HTe" id="w6m-HX-fgI"/>
                         <outlet property="JumpButton" destination="ko7-7s-Ov5" id="L17-KC-J97"/>
                         <outlet property="LeftButton" destination="fy1-1d-oQO" id="tnb-OJ-EXN"/>
                         <outlet property="RightButton" destination="JLS-YI-5M9" id="f1f-V0-6SL"/>
-                        <segue destination="Ts0-m0-5xQ" kind="modal" id="Cfm-dJ-inp"/>
+                        <segue destination="avB-Hr-O5h" kind="modal" identifier="SegueGameInterface2TitleScreen" modalTransitionStyle="crossDissolve" animates="NO" id="B4p-4z-fBB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581" y="-153"/>
+            <point key="canvasLocation" x="27" y="-97"/>
         </scene>
         <!--Picture Story Pan-->
         <scene sceneID="ifW-zi-cKe">
             <objects>
                 <viewController id="Ts0-m0-5xQ" userLabel="Picture Story Pan" customClass="TTPictureStoryPanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvQ-cu-bXw" userLabel="View - Picture Story Pan">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="For movies / pictures " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-Lc-e36">
@@ -210,13 +209,12 @@
                             <constraint firstItem="LDk-Lc-e36" firstAttribute="leading" secondItem="cvQ-cu-bXw" secondAttribute="leading" constant="49" id="OQc-Fe-Fwf"/>
                             <constraint firstItem="LDk-Lc-e36" firstAttribute="top" secondItem="cvQ-cu-bXw" secondAttribute="top" constant="54" id="ZD5-BP-NuX"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1H3-xk-j0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282" y="-479"/>
+            <point key="canvasLocation" x="1102" y="-647"/>
         </scene>
         <!--Game Screen Graphics-->
         <scene sceneID="CKw-bF-V2m">
@@ -252,52 +250,21 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="hero" destination="hBY-Dn-MEi" id="uPD-cc-TFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tba-eG-JDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282" y="62"/>
+            <point key="canvasLocation" x="1110" y="-46"/>
         </scene>
     </scenes>
     <resources>
         <image name="megaman.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TTButtonExtraGuestures" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTButtonExtraGuestures.h"/>
-        </class>
-        <class className="TTGameInterfaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTGameInterfaceViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="AttackButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="JumpButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="LeftButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="RightButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TTGameScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTGameScreenViewController.h"/>
-        </class>
-        <class className="TTPictureStoryPanViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTPictureStoryPanViewController.h"/>
-        </class>
-        <class className="TTViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TTViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ButtonCredits:"/>
-                <relationship kind="action" name="ButtonLoadGame:"/>
-                <relationship kind="action" name="ButtonNewGame:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="alV-vq-B6i"/>
-    </inferredMetricsTieBreakers>
 </document>
